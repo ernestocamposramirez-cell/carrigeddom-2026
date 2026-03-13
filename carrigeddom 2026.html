@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARRIGEDDON - 90s Arcade Mayhem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- CRT scanline effect overlay -->
+        <div class="crt-overlay"></div>
+        
+        <!-- Game UI -->
+        <div id="main-menu">
+            <div class="menu-content">
+                <div class="menu-title">CARRIGEDDON</div>
+                <div class="menu-instructions">
+                    HAGA CLIC PARA ACTIVAR AUDIO<br>
+                    Y PULSE CUALQUIER TECLA PARA JUGAR
+                </div>
+            </div>
+        </div>
+        
+        <div id="game-over">
+            <div class="outro-images">
+                <img id="outro-img" src="assets/sprites/outro1.png" alt="Game Over">
+            </div>
+            <div class="final-score">
+                CIUDAD EN CAOS<br>
+                PUNTUACIÓN: <span id="final-stats">0</span>
+            </div>
+            
+            <div id="credits-container">
+                <div id="credits-scroll">
+                    <p class="credits-header">CRÉDITOS</p>
+                    <p>Gracias por jugar a Carrigeddom 2026</p>
+                    <br>
+                    <p>En los 90s un grupo de colegas<br>desarrollaron Carrigeddom,<br>desde entonces viven como prófugos<br>al margen de la ley y la sociedad...<br>donde quiera que estén...<br>siempre tendrán un sitio en mi corazón.</p>
+                    <br>
+                    <p class="credits-name">SIBD</p>
+                    <p>El cerebro de la bestia, la picadora humana de código,<br>el MIEMBRO ejecutor.</p>
+                    <br>
+                    <p class="credits-name">MMM</p>
+                    <p>Grafista.... desequilibrado mental viendo lo que dibujo....</p>
+                    <br>
+                    <p class="credits-name">JMGN</p>
+                    <p>Tenía un cuarto muy chulo en casa<br>de sus padres... aún lo tiene.</p>
+                    <br>
+                    <p class="credits-name">ECR</p>
+                    <p>Haced siempre lo contrario de lo que os diga...</p>
+                    <br>
+                    <p class="credits-header">RELLENO</p>
+                    <p>Yo, I'll tell you what I want, what I really, really want<br>So tell me what you want, what you really, really want<br>I'll tell you what I want, what you really, really want<br>So tell me what you want, what you really, really want<br>I wanna, (ha) I wanna, (ha) I wanna, (ha) I wanna, (ha)<br>I wanna really, really, really wanna zigazig ah</p>
+                    <br>
+                    <p>If you want my future, forget my past<br>If you wanna get with me, better make it fast<br>Now don't go wasting my precious time<br>Get your act together we could be just fine</p>
+                    <br>
+                    <p>I'll tell you what I want, what I really, really want<br>So tell me what you want, what you really, really want<br>I wanna, (ha) I wanna, (ha) I wanna, (ha) I wanna, (ha)<br>I wanna really, really, really wanna zigazig ah</p>
+                    <br>
+                    <p>If you wanna be my lover, you gotta get with my friends<br>(Gotta get with my friends)<br>Make it last forever, friendship never ends<br>If you wanna be my lover, you have got to give<br>Taking is too easy, but that's the way it is</p>
+                    <br>
+                    <p>What do you think about that?<br>Now you know how I feel<br>Say, you can handle my love?<br>Are you for real?<br>(Are you for real?)<br>I won't be hasty, I'll give you a try<br>If you really bug me then I'll say goodbye</p>
+                    <br>
+                    <p class="credits-header">FIN</p>
+                    <p>Carrigeddom 2026 es una parodia, no imites al punky<br>Sin ánimo de lucro.<br>Nos vemos en el super.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ui-layer">
+            <div class="hud-top">
+                <div class="chaos-meter">
+                    CHAOS: <span id="score">0</span>
+                </div>
+                <div class="time-meter" style="color: #ffaa00; text-align: center; flex: 1;">
+                    TIME: <span id="timer">2:00</span>
+                </div>
+                <div class="speed-meter">
+                    MPH: <span id="speed">0</span>
+                </div>
+            </div>
+            <div class="powerup-status" id="powerup-display">
+                <!-- Powerups will appear here (e.g., "NITRO ACTIVE!") -->
+            </div>
+            
+            <div class="controls-hint">
+                [Arrows] Drive/Rev &nbsp;&nbsp; [Space] Handbrake &nbsp;&nbsp; [Alt] Laser
+            </div>
+        </div>
+
+        <!-- The main game canvas -->
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <!-- Scripts (Loaded in order of dependency) -->
+    <script src="js/utils.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/physics.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/environment.js"></script>
+    <script src="js/npc.js"></script>
+    <script src="js/powerups.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
