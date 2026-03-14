@@ -65,7 +65,7 @@ class AudioManager {
 
         this.outroMusic = new Audio('assets/audio/outro.mp3');
         this.outroMusic.loop = true;
-        this.outroMusic.volume = 0.4;
+        this.outroMusic.volume = 0.6;
 
         // La activación se delega en start(), llamado desde game.js,
         // para unificar clic y teclado en un único flujo de activación.
